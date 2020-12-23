@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 
 const Navbar = styled.div`
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
+	height: 7vh;
 	background-color: black;
 	color: white;
 `
@@ -29,23 +30,27 @@ const Logo = styled.a`
 `
 
 const Header = () => {
+	const [navbarOpen, setNavbarOpen] = useState(false)
+
 	return (
 		<Navbar>
-			<Link href="/shorts">
-				<Buttons>Shorts</Buttons>
-			</Link>
-			<Link href="/music_videos">
-				<Buttons>Music Videos</Buttons>
-			</Link>
 			<Link href="/">
 				<Logo>MONESTARY</Logo>
 			</Link>
-			<Link href="/contact">
-				<Buttons>Contact Us</Buttons>
-			</Link>
-			<Link href="/about">
-				<Buttons>About Us</Buttons>
-			</Link>
+			<div>
+				<Link href="/shorts">
+					<Buttons>Shorts</Buttons>
+				</Link>
+				<Link href="/music_videos">
+					<Buttons>Music Videos</Buttons>
+				</Link>
+				<Link href="/about">
+					<Buttons>About Us</Buttons>
+				</Link>
+				<Link href="/contact">
+					<Buttons>Contact</Buttons>
+				</Link>
+			</div>
 		</Navbar>
 	)
 }
