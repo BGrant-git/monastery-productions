@@ -11,7 +11,7 @@ const Home = () => {
 
 			<Grid container>
 				<Grid item xs={12}>
-					{/* some image  */}
+					{/* some image  */}home
 				</Grid>
 			</Grid>
 		</>

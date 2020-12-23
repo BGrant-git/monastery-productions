@@ -11,7 +11,8 @@ const Navbar = styled.div`
 `
 
 const Buttons = styled.a`
-	padding: 20px;
+	padding: 12px;
+	font-size: 20px;
 	cursor: pointer;
 
 	&:hover {
